@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSLiT - Distribuidor Mayorista | Inicio</title>
+    <meta name="description" content="FOSLiT - Su socio de confianza en distribución mayorista de encendedores, iluminación y baterías. Calidad garantizada y mejores precios.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="src/assets/logo/LOGO.jpeg">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link" aria-label="FOSLiT - Inicio">
+                        <img src="src/assets/logo/LOGO.jpeg" alt="FOSLiT - Mayorista" class="logo-img" width="auto" height="auto" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fa-solid fa-house" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="productos.html" class="nav-link">
+                            <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="empresa.html" class="nav-link">
+                            <i class="fa-solid fa-building" aria-hidden="true"></i>
+                            <span>Empresa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre-nosotros.html" class="nav-link">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            <span>Sobre Nosotros</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bienvenidos a FOSLiT</h1>
+                    <p class="hero-subtitle">Su socio de confianza en distribución mayorista</p>
+                    <p class="hero-description">
+                        Somos una empresa mayorista especializada en productos de calidad para encendedores, 
+                        iluminación y baterías. Ofrecemos un catálogo completo con los mejores precios 
+                        del mercado para distribuidores y comerciantes.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="productos.html" class="cta-button primary">Ver Catálogo</a>
+                        <a href="empresa.html" class="cta-button secondary">Conocer Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Carousel -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="Encendedores Premium">
+                        <div class="slide-content">
+                            <h3>Encendedores Premium</h3>
+                            <p>Calidad superior para uso profesional</p>
+                            <a href="productos.html" class="slide-cta">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop" alt="Iluminación LED">
+                        <div class="slide-content">
+                            <h3>Iluminación LED</h3>
+                            <p>Tecnología moderna y eficiente</p>
+                            <a href="productos.html" class="slide-cta">Ver Categoría</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1609592062458-9ac1412caa28?w=800&h=600&fit=crop" alt="Baterías Duraderas">
+                        <div class="slide-content">
+                            <h3>Baterías Duraderas</h3>
+                            <p>Energía confiable para todos los dispositivos</p>
+                            <a href="productos.html" class="slide-cta">Ver Categoría</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué elegir FOSLiT?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Productos certificados con garantía completa y respaldo del fabricante</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Distribución nacional con tiempos de entrega optimizados</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Mejores Precios</h3>
+                    <p>Precios mayoristas competitivos con descuentos por volumen</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte 24/7</h3>
+                    <p>Atención personalizada y soporte técnico cuando lo necesites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para impulsar tu negocio?</h2>
+                <p>Únete a más de 500 distribuidores que confían en FOSLiT para hacer crecer sus ventas</p>
+                <div class="cta-buttons">
+                    <a href="productos.html" class="cta-button primary">Explorar Catálogo</a>
+                    <a href="sobre-nosotros.html" class="cta-button secondary">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FOSLiT</h3>
+                    <p>Su distribuidor mayorista de confianza</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="productos.html">Encendedores</a></li>
+                        <li><a href="productos.html">Iluminación</a></li>
+                        <li><a href="productos.html">Baterías</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="empresa.html">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="sobre-nosotros.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> ventas@foslit.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección de la empresa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 FOSLiT. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

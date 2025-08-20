@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - FOSLiT | Catálogo Mayorista</title>
+    <meta name="description" content="Explore nuestro catálogo completo de encendedores, iluminación y baterías. Productos de calidad con precios mayoristas competitivos.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="src/assets/logo/LOGO.jpeg">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link" aria-label="FOSLiT - Inicio">
+                        <img src="src/assets/logo/LOGO.jpeg" alt="FOSLiT - Mayorista" class="logo-img" width="auto" height="auto" decoding="async">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fa-solid fa-house" aria-hidden="true"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="productos.html" class="nav-link active">
+                            <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="empresa.html" class="nav-link">
+                            <i class="fa-solid fa-building" aria-hidden="true"></i>
+                            <span>Empresa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre-nosotros.html" class="nav-link">
+                            <i class="fa-solid fa-users" aria-hidden="true"></i>
+                            <span>Sobre Nosotros</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span>/</span>
+                <span>Productos</span>
+            </div>
+            <h1>Nuestro Catálogo</h1>
+            <p>Descubre nuestra amplia gama de productos mayoristas</p>
+        </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-controls">
+                <div class="search-bar">
+                    <input type="text" id="product-search" placeholder="Buscar productos...">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="filter-controls">
+                    <select id="sort-select">
+                        <option value="name">Ordenar por nombre</option>
+                        <option value="price-low">Precio: menor a mayor</option>
+                        <option value="price-high">Precio: mayor a menor</option>
+                        <option value="category">Por categoría</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Categories Sidebar -->
+                <aside class="categories-sidebar">
+                    <h3>Categorías</h3>
+                    <div class="category-filters">
+                        <button class="category-btn active" data-category="all">
+                            <i class="fas fa-th-large"></i>
+                            Todos los productos
+                        </button>
+                        <button class="category-btn" data-category="encendedores">
+                            <i class="fas fa-fire"></i>
+                            Encendedores
+                        </button>
+                        <button class="category-btn" data-category="iluminacion">
+                            <i class="fas fa-lightbulb"></i>
+                            Iluminación
+                        </button>
+                        <button class="category-btn" data-category="baterias">
+                            <i class="fas fa-battery-full"></i>
+                            Baterías
+                        </button>
+                    </div>
+
+                    <!-- Subcategory Filters -->
+                    <div id="subcategory-filters" class="subcategory-filters">
+                        <h4>Filtros</h4>
+                        <div class="filter-group" id="filter-buttons">
+                            <!-- Dynamic filters will be added here -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <div class="results-info">
+                            <span id="products-count">Cargando productos...</span>
+                        </div>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="products-grid">
+                        <!-- Products will be dynamically loaded here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be dynamically added -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿No encuentras lo que buscas?</h2>
+                <p>Contáctanos para consultas especiales y productos personalizados</p>
+                <a href="sobre-nosotros.html" class="cta-button">Contactar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FOSLiT</h3>
+                    <p>Su distribuidor mayorista de confianza</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="productos.html">Encendedores</a></li>
+                        <li><a href="productos.html">Iluminación</a></li>
+                        <li><a href="productos.html">Baterías</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="empresa.html">Servicios</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="sobre-nosotros.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> ventas@foslit.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección de la empresa</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 FOSLiT. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>
